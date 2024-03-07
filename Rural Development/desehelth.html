@@ -7,12 +7,78 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        
+        section {
+            margin: 20px;
+        }
+        
+        .diseaseCard {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+
     <header>
         <h1>Disease and Treatment Information</h1>
     </header>
     <section id="diseaseInfo">
       
     </section>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+           
+            const diseasesData = [
+                { name: 'Flu', treatment: 'Rest, fluids, and antiviral medications', medicine: 'Oseltamivir' },
+                { name: 'Common Cold', treatment: 'Rest, fluids, and over-the-counter medications', medicine: 'Acetaminophen' },
+                { name: 'Migraine', treatment: 'Pain relievers, rest, and avoiding triggers', medicine: 'Ibuprofen' },
+               
+            ];
+        
+            
+            function displayDiseaseInfo() {
+                const diseaseInfoSection = document.getElementById('diseaseInfo');
+        
+                diseasesData.forEach(disease => {
+                    const diseaseCard = document.createElement('div');
+                    diseaseCard.classList.add('diseaseCard');
+        
+                    const diseaseName = document.createElement('h2');
+                    diseaseName.textContent = disease.name;
+        
+                    const treatmentInfo = document.createElement('p');
+                    treatmentInfo.textContent = `Recommended Treatment: ${disease.treatment}`;
+        
+                    const medicineInfo = document.createElement('p');
+                    medicineInfo.classList.add('medicine');
+                    medicineInfo.textContent = `Recommended Medicine: ${disease.medicine}`;
+        
+                    diseaseCard.appendChild(diseaseName);
+                    diseaseCard.appendChild(treatmentInfo);
+                    diseaseCard.appendChild(medicineInfo);
+                    diseaseInfoSection.appendChild(diseaseCard);
+                });
+            }
+        
+            
+            displayDiseaseInfo();
+        });
+        
+        
+    </script>
 </body>
 </html>
