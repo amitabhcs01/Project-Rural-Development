@@ -1,0 +1,80 @@
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #004990;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  nav .logo h1 {
+    margin: 0;
+  }
+  
+  nav .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav .menu a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Main content styles */
+  main {
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    nav .menu {
+      flex-direction: column;
+    }
+  
+    nav .menu a {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  /* Interactive elements */
+  button, .button {
+    background-color: #ffcc00;
+    color: #004990;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover, .button:hover {
+    background-color: #ffd633;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
