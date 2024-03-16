@@ -90,18 +90,18 @@
     <section>
         <h2>Registration Form</h2>
         <p>Complete the registration form below to schedule your eye checkup for senior citizens. Please provide accurate information to help us better understand your needs and provide the best possible care.</p>
-        <form id="registrationForm">
+        <form id="registrationForm" action="connect.php" method="post">
             <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
+            <input type="text" id="fullName" name="fullName" required name="fullName"/>
 
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
+            <input type="number" id="age" name="age" required name="age"/>
 
             <label for="contactNumber">Contact Number:</label>
-            <input type="tel" id="contactNumber" name="contactNumber" required>
+            <input type="tel" id="contactNumber" name="contactNumber" required name="contactNumber" />
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required name="email"/>
 
            
             <button type="button" onclick="submitForm()">Submit</button>
